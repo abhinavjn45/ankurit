@@ -1,0 +1,465 @@
+/* assets/css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.keyword {
+    font-family: var(--font-accent);
+    font-weight: 700;
+    font-size: 1.2em; /* Slightly larger to match visual weight of sans-serif */
+}
+
+/* Utilities */
+.btn-primary {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform var(--transition-fast);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--accent-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+/* Header & Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 5%;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all var(--transition-normal);
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.navbar.theme-light .mobile-menu-btn span,
+.navbar.scrolled .mobile-menu-btn span {
+    background-color: #04213F;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-lg); /* Restored larger gap */
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-cta {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-cta .btn-primary {
+    background: var(--accent-primary); /* Brand Orange */
+    color: #ffffff;
+}
+
+.nav-links a:not(.btn-primary) {
+    color: #ffffff; /* White text on transparent/dark navbar */
+    text-decoration: none;
+    white-space: nowrap; /* Prevent wrapping into two lines */
+    transition: color var(--transition-fast);
+}
+
+.nav-links a:not(.btn-primary):hover {
+    color: var(--accent-primary); /* Brand Orange on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.hero-carousel {
+    width: 100%;
+    min-height: 100vh;
+    display: grid; /* Modern way to stack elements without absolute positioning */
+}
+
+.carousel-slide {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    /* When losing 'active', fade out immediately over 0.4s */
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    /* When gaining 'active', wait 0.4s (for the old slide to disappear) before fading in */
+    transition: opacity 0.4s ease-in 0.4s, visibility 0s 0.4s;
+}
+
+.hero-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px; /* Offset for header */
+}
+
+.hero-text-col {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-xl) 5%;
+}
+
+.founder-image-wrapper {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    border-radius: var(--radius-lg);
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.founder-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the container cleanly */
+}
+
+.hero-image-col {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.sub-heading {
+    color: var(--accent-primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+.hero-text-col h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+}
+
+.text-lines {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.text-lines p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-group {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+
+/* =========================================
+   Dual-Themed Carousel Aesthetics
+   ========================================= */
+
+/* 1. Founder Journey (Calm, Subtle, Light) */
+.slide-founders {
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe); /* Soft airy blue/white */
+}
+
+.slide-founders h1,
+.slide-founders .text-lines {
+    color: #04213F; /* Grounding Navy */
+}
+
+.slide-founders .sub-heading,
+.slide-founders .keyword {
+    color: var(--accent-secondary); /* Brand Blue accents */
+}
+
+.slide-founders .btn-primary {
+    background: var(--accent-secondary); /* Soft Brand Blue */
+    color: #ffffff;
+}
+
+/* 2. Investor Journey (Confident, Direct, Dark) */
+.slide-investors {
+    background-color: #04213F; /* Commanding Navy */
+}
+
+.slide-investors h1,
+.slide-investors .text-lines {
+    color: #ffffff; /* Crisp white */
+}
+
+.slide-investors .sub-heading,
+.slide-investors .keyword {
+    color: var(--accent-primary); /* Brand Orange accents */
+}
+
+.slide-investors .btn-primary {
+    background: var(--accent-primary); /* Bold Brand Orange */
+    color: #ffffff;
+}
+
+/* =========================================
+   Dynamic Navbar Theming
+   ========================================= */
+/* Default (Dark Theme) */
+.navbar.theme-dark .nav-links a:not(.btn-primary) {
+    color: #ffffff;
+}
+.navbar.theme-dark .logo {
+    color: #ffffff; /* If text logo */
+}
+
+/* Light Theme (For Founder Slide) */
+.navbar.theme-light .nav-links a:not(.btn-primary) {
+    color: #04213F;
+}
+.navbar.theme-light .logo {
+    color: #04213F;
+}
+
+/* Scrolled state overrides */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Added subtle shadow for separation */
+}
+
+.navbar.scrolled .nav-links a:not(.btn-primary) {
+    color: #04213F !important;
+}
+
+.navbar.scrolled .logo {
+    color: #04213F !important;
+}
+/* Dynamic Section */
+.dynamic-section {
+    padding: var(--spacing-xl) 5%;
+    background-color: var(--bg-secondary);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-header p {
+    color: var(--text-secondary);
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.data-card {
+    background: var(--bg-primary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform var(--transition-fast);
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.loading-spinner {
+    text-align: center;
+    color: var(--text-secondary);
+    grid-column: 1 / -1;
+    padding: var(--spacing-xl);
+}
+
+/* Footer */
+#main-footer {
+    text-align: center;
+    padding: var(--spacing-lg) 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+@media (max-width: 992px) {
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(10, 10, 11, 0.98);
+        padding: var(--spacing-xl) 0;
+        gap: var(--spacing-lg);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden */
+        transition: clip-path 0.4s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar.theme-light .nav-menu,
+    .navbar.scrolled .nav-menu {
+        background-color: rgba(255, 255, 255, 0.98);
+    }
+
+    .nav-menu.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Revealed */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .nav-cta {
+        justify-content: center;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    /* Hamburger Animation */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .hero-text-col h1 {
+        font-size: 2.5rem; /* Scale down hero text on mobile */
+    }
+    
+    .hero-layout {
+        flex-direction: column-reverse; /* Text below image on mobile, or vice versa */
+    }
+    
+    .hero-text-col, .hero-image-col {
+        width: 100%;
+        padding: var(--spacing-md) 5%;
+    }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 576px) {
+    .hero-text-col h1 {
+        font-size: 2rem; /* Further scale down for small screens */
+    }
+    
+    .text-lines {
+        font-size: 1rem;
+    }
+
+    .founder-image-wrapper {
+        max-width: 200px; /* Reduce image size to ensure it fits on screen alongside text */
+        margin: 0 auto;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
