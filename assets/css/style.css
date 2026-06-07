@@ -105,7 +105,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
 }
 
-.navbar.theme-light .mobile-menu-btn span,
 .navbar.scrolled .mobile-menu-btn span {
     background-color: #04213F;
 }
@@ -147,22 +146,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #f8fafc, #e0f2fe); /* Default Light Theme */
+    background-color: #04213F; /* Dark Theme Always */
     z-index: 1;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: #04213F; /* Dark Theme */
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-}
-
-.hero-section.theme-dark-active::before {
-    opacity: 1;
 }
 
 .hero-layout {
@@ -173,9 +158,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-text-col {
-    width: 60%;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     display: grid; /* Stack text slides on top of each other */
     padding: var(--spacing-xl) 5%;
+    text-align: center;
 }
 
 .text-slide {
@@ -187,6 +175,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Center horizontally */
 }
 
 .text-slide.active {
@@ -196,32 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
-.founder-image-wrapper {
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 3/4;
-    border-radius: var(--radius-lg);
-    background: var(--bg-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    overflow: hidden;
-}
 
-.founder-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills the container cleanly */
-}
-
-.hero-image-col {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-lg);
-}
 
 .sub-heading {
     color: var(--accent-primary);
@@ -251,6 +215,30 @@ h1, h2, h3, h4, h5, h6 {
 .cta-group {
     display: flex;
     gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.hero-quote {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: calc(var(--spacing-xl) * 1.5);
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+}
+
+.hero-quote span {
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 0.5rem;
 }
 
 
@@ -259,11 +247,11 @@ h1, h2, h3, h4, h5, h6 {
    ========================================= */
 
 /* 1. Founder Journey (Calm, Subtle, Light) */
-/* Background is handled by .hero-section default gradient */
+/* Background is #04213F */
 
 .slide-founders h1,
 .slide-founders .text-lines {
-    color: #04213F; /* Grounding Navy */
+    color: #ffffff; /* Crisp white for Navy background */
 }
 
 .slide-founders .sub-heading,
@@ -271,14 +259,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-secondary); /* Brand Blue accents */
 }
 
-.slide-founders .btn-primary {
-    background: var(--accent-secondary); /* Soft Brand Blue */
-    color: #ffffff;
-}
-
-/* 2. Investor Journey (Confident, Direct, Dark) */
-/* Background is handled by .hero-section.theme-dark-active::before */
-
+/* 2. Investor Journey */
 .slide-investors h1,
 .slide-investors .text-lines {
     color: #ffffff; /* Crisp white */
@@ -289,9 +270,27 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-primary); /* Brand Orange accents */
 }
 
-.slide-investors .btn-primary {
-    background: var(--accent-primary); /* Bold Brand Orange */
-    color: #ffffff;
+/* Button Theming classes used in both slides */
+.btn-founder {
+    background: transparent !important;
+    border: 2px solid var(--accent-secondary) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-founder:hover {
+    background: var(--accent-secondary) !important;
+}
+
+.btn-investor {
+    background: transparent !important;
+    border: 2px solid var(--accent-primary) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-investor:hover {
+    background: var(--accent-primary) !important;
 }
 
 /* =========================================
@@ -382,6 +381,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================================
+   Floating Action Button (WhatsApp)
+   ========================================= */
+.fab-whatsapp {
+    position: fixed;
+    bottom: var(--spacing-lg);
+    left: var(--spacing-lg);
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.fab-whatsapp:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    background-color: #128C7E;
+}
+
+.fab-whatsapp svg {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+}
+
+/* =========================================
    Responsive Design
    ========================================= */
 @media (max-width: 992px) {
@@ -399,7 +430,6 @@ h1, h2, h3, h4, h5, h6 {
         backdrop-filter: blur(10px);
     }
 
-    .navbar.theme-light .nav-menu,
     .navbar.scrolled .nav-menu {
         background-color: rgba(255, 255, 255, 0.98);
     }
@@ -437,12 +467,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2.5rem; /* Scale down hero text on mobile */
     }
     
-    .hero-layout {
-        flex-direction: column-reverse; /* Text below image on mobile, or vice versa */
-    }
-    
-    .hero-text-col, .hero-image-col {
-        width: 100%;
+    .hero-text-col {
         padding: var(--spacing-md) 5%;
     }
 }
@@ -457,10 +482,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1rem;
     }
 
-    .founder-image-wrapper {
-        max-width: 200px; /* Reduce image size to ensure it fits on screen alongside text */
-        margin: 0 auto;
-    }
+
     
     .section-header h2 {
         font-size: 2rem;
