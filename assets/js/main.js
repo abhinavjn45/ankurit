@@ -42,6 +42,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    // Scroll Animations (Intersection Observer)
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+        scrollObserver.observe(el);
+    });
+
     // 2. Load Dynamic Data from Google Sheets
     const dataContainer = document.getElementById('data-container');
     if (dataContainer) {
