@@ -33,12 +33,36 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--radius-full);
     text-decoration: none;
     font-weight: 500;
-    transition: transform var(--transition-fast);
-    display: inline-block;
+    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
+}
+
+.btn-primary .icon-right {
+    width: 2.1em; /* Adjusted for shorter tail */
+    height: 0.6em; /* Keeps arrowhead proportionate */
+    fill: none;
+    transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover .icon-right {
+    transform: translateX(4px);
+}
+
+.btn-primary .icon-left {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover .icon-left {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .btn-secondary {
