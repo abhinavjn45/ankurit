@@ -37,18 +37,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Hero Carousel Logic
-    const slides = document.querySelectorAll('.carousel-slide');
+    const slides = document.querySelectorAll('.text-slide');
+    const heroSection = document.getElementById('hero');
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds
+
+    function updateHeroBackground(slide) {
+        if (slide.classList.contains('slide-investors')) {
+            heroSection.classList.add('theme-dark-active');
+        } else {
+            heroSection.classList.remove('theme-dark-active');
+        }
+    }
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+        
+        updateNavbarTheme(slides[currentSlide]);
+        updateHeroBackground(slides[currentSlide]);
+    }
+
     if (slides.length > 0) {
-        let currentSlide = 0;
         updateNavbarTheme(slides[currentSlide]); // Initialize first slide
+        updateHeroBackground(slides[currentSlide]);
         
         if (slides.length > 1) {
-            setInterval(() => {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-                updateNavbarTheme(slides[currentSlide]);
-            }, 5000); // Change slide every 5 seconds
+            setInterval(nextSlide, slideInterval);
         }
     }
 

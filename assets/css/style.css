@@ -141,52 +141,59 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-primary); /* Brand Orange on hover */
 }
 
-/* Hero Section */
+/* Hero Section Layout */
 .hero-section {
     min-height: 100vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
-    background-color: transparent;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe); /* Default Light Theme */
+    z-index: 1;
 }
 
-.hero-carousel {
-    width: 100%;
-    min-height: 100vh;
-    display: grid; /* Modern way to stack elements without absolute positioning */
-}
-
-.carousel-slide {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    height: 100%;
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #04213F; /* Dark Theme */
     opacity: 0;
-    visibility: hidden;
-    /* When losing 'active', fade out immediately over 0.4s */
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+    transition: opacity 0.4s ease;
+    z-index: -1;
 }
 
-.carousel-slide.active {
+.hero-section.theme-dark-active::before {
     opacity: 1;
-    visibility: visible;
-    /* When gaining 'active', wait 0.4s (for the old slide to disappear) before fading in */
-    transition: opacity 0.4s ease-in 0.4s, visibility 0s 0.4s;
 }
 
 .hero-layout {
     display: flex;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     padding-top: 80px; /* Offset for header */
 }
 
 .hero-text-col {
     width: 60%;
+    display: grid; /* Stack text slides on top of each other */
+    padding: var(--spacing-xl) 5%;
+}
+
+.text-slide {
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--spacing-xl) 5%;
+}
+
+.text-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in 0.4s, visibility 0s 0.4s;
+    z-index: 2;
 }
 
 .founder-image-wrapper {
@@ -252,9 +259,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================= */
 
 /* 1. Founder Journey (Calm, Subtle, Light) */
-.slide-founders {
-    background: linear-gradient(135deg, #f8fafc, #e0f2fe); /* Soft airy blue/white */
-}
+/* Background is handled by .hero-section default gradient */
 
 .slide-founders h1,
 .slide-founders .text-lines {
@@ -272,9 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 2. Investor Journey (Confident, Direct, Dark) */
-.slide-investors {
-    background-color: #04213F; /* Commanding Navy */
-}
+/* Background is handled by .hero-section.theme-dark-active::before */
 
 .slide-investors h1,
 .slide-investors .text-lines {
