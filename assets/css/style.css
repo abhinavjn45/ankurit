@@ -233,8 +233,10 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Center h1 and paragraphs vertically */
     align-items: center; /* Center horizontally */
+    position: relative;
+    padding-top: 2.5rem; /* Give space for the absolutely positioned sub-heading */
 }
 
 .text-slide.active {
@@ -259,6 +261,15 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     margin-bottom: var(--spacing-sm);
     font-size: 0.875rem;
+}
+
+.text-slide .sub-heading {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    white-space: nowrap;
 }
 
 .hero-text-col h1 {
