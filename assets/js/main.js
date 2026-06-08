@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const slideInterval = 8000; // 8 seconds, slower slide change
 
     function nextSlide() {
+        // Remove the staggered intro class so it doesn't run on future cycles
+        document.body.classList.remove('initial-load');
+        
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');

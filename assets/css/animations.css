@@ -1,0 +1,261 @@
+/* assets/css/animations.css */
+
+/* Remove the pendulum hanging threads in the showcase so they don't interfere */
+.hero-logo::before, .hero-logo::after {
+    display: none;
+}
+.hero-logo {
+    animation: none;
+}
+
+/* =========================================
+   1. Cinematic Spotlight
+   ========================================= */
+.logo-spotlight {
+    position: relative;
+}
+
+.logo-spotlight img {
+    opacity: 0.1; /* Dim base image */
+    transition: opacity 0.5s ease 2s; /* Fade up fully after animation */
+}
+
+.logo-spotlight.play-anim img {
+    opacity: 1;
+}
+
+.logo-spotlight .spotlight-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/logo/logo-white.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Create a circular mask that moves from left to right */
+    -webkit-mask-image: radial-gradient(circle 40px at -20% 50%, black 100%, transparent 100%);
+    mask-image: radial-gradient(circle 40px at -20% 50%, black 100%, transparent 100%);
+    opacity: 0;
+}
+
+.logo-spotlight.play-anim .spotlight-mask {
+    opacity: 1;
+    animation: spotlightSweep 2s ease-in-out forwards;
+}
+
+@keyframes spotlightSweep {
+    0% {
+        -webkit-mask-image: radial-gradient(circle 40px at -20% 50%, black 40%, transparent 80%);
+        mask-image: radial-gradient(circle 40px at -20% 50%, black 40%, transparent 80%);
+    }
+    100% {
+        -webkit-mask-image: radial-gradient(circle 40px at 120% 50%, black 40%, transparent 80%);
+        mask-image: radial-gradient(circle 40px at 120% 50%, black 40%, transparent 80%);
+    }
+}
+
+/* =========================================
+   2. Lens Focus (Bokeh)
+   ========================================= */
+.logo-lens img {
+    opacity: 0;
+    transform: scale(3);
+    filter: blur(20px);
+}
+
+.logo-lens.play-anim img {
+    animation: lensFocus 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes lensFocus {
+    0% {
+        opacity: 0;
+        transform: scale(3);
+        filter: blur(20px);
+    }
+    50% {
+        opacity: 0.8;
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0px);
+    }
+}
+
+/* =========================================
+   3. Neon Flicker
+   ========================================= */
+.logo-neon img {
+    opacity: 0;
+}
+
+.logo-neon.play-anim img {
+    animation: neonFlicker 2s forwards;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0.1;
+    }
+    0% { opacity: 0; }
+    5% { opacity: 0.2; }
+    10% { opacity: 0; }
+    15% { opacity: 0.8; }
+}
+
+/* =========================================
+   4. Digital Glitch
+   ========================================= */
+.logo-glitch {
+    position: relative;
+}
+
+.logo-glitch img {
+    opacity: 0;
+}
+
+.logo-glitch.play-anim img {
+    opacity: 1;
+    animation: glitchEntrance 0.8s ease-out forwards;
+}
+
+.logo-glitch.play-anim::before,
+.logo-glitch.play-anim::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/logo/logo-white.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.logo-glitch.play-anim::before {
+    left: 4px;
+    filter: drop-shadow(-2px 0 0 #0ff); /* Cyan */
+    animation: glitchTear 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+.logo-glitch.play-anim::after {
+    left: -4px;
+    filter: drop-shadow(2px 0 0 #f0f); /* Magenta */
+    animation: glitchTear2 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+/* Stop the glitch pseudo elements after the entrance completes */
+.logo-glitch.play-anim.settled::before,
+.logo-glitch.play-anim.settled::after {
+    display: none;
+}
+
+@keyframes glitchEntrance {
+    0% { transform: skewX(20deg) scaleY(1.2); opacity: 0; filter: blur(5px); }
+    10% { transform: skewX(-20deg) scaleY(0.8); opacity: 1; filter: blur(0px); }
+    20% { transform: skewX(10deg); }
+    30% { transform: skewX(-10deg); }
+    40% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); opacity: 1; }
+}
+
+@keyframes glitchTear {
+    0% { clip-path: inset(10% 0 80% 0); }
+    20% { clip-path: inset(80% 0 10% 0); }
+    40% { clip-path: inset(30% 0 50% 0); }
+    60% { clip-path: inset(60% 0 20% 0); }
+    80% { clip-path: inset(5% 0 90% 0); }
+    100% { clip-path: inset(40% 0 40% 0); }
+}
+
+@keyframes glitchTear2 {
+    0% { clip-path: inset(20% 0 60% 0); }
+    20% { clip-path: inset(60% 0 20% 0); }
+    40% { clip-path: inset(40% 0 40% 0); }
+    60% { clip-path: inset(80% 0 5% 0); }
+    80% { clip-path: inset(10% 0 80% 0); }
+    100% { clip-path: inset(50% 0 30% 0); }
+}
+
+/* =========================================
+   5. 3D Coin Toss Flip
+   ========================================= */
+.logo-3d {
+    perspective: 1000px; /* Enable 3D space */
+}
+
+.logo-3d img {
+    opacity: 0;
+    transform-style: preserve-3d;
+}
+
+.logo-3d.play-anim img {
+    animation: coinToss 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes coinToss {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.5) rotateY(720deg) rotateX(20deg);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateY(0deg) rotateX(0deg);
+    }
+}
+
+/* =========================================
+   6. SVG Draw-In
+   ========================================= */
+.logo-drawin svg {
+    height: 60px;
+    width: auto;
+    overflow: visible;
+}
+
+.logo-drawin path,
+.logo-drawin polygon,
+.logo-drawin rect,
+.logo-drawin circle,
+.logo-drawin polyline,
+.logo-drawin line {
+    stroke: #ffffff;
+    stroke-width: 1.5px;
+    fill: transparent;
+    transition: fill 0.5s ease;
+}
+
+.logo-drawin.play-anim path,
+.logo-drawin.play-anim polygon,
+.logo-drawin.play-anim rect,
+.logo-drawin.play-anim circle,
+.logo-drawin.play-anim polyline,
+.logo-drawin.play-anim line {
+    animation: svgDrawIn 2.5s ease-in-out forwards, svgFillIn 1s ease-in forwards 2s;
+}
+
+@keyframes svgDrawIn {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes svgFillIn {
+    to {
+        fill: #ffffff;
+        stroke: transparent;
+    }
+}
