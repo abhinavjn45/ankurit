@@ -183,28 +183,46 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section Layout */
 .hero-section {
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
     background-color: #04213F; /* Dark Theme Always */
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-layout {
     display: flex;
     width: 100%;
-    min-height: 100vh;
-    padding-top: 80px; /* Offset for header */
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-text-col {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    display: grid; /* Stack text slides on top of each other */
-    padding: var(--spacing-xl) 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
     text-align: center;
+}
+
+.hero-logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.slides-wrapper {
+    display: grid;
+    width: 100%;
 }
 
 .text-slide {
@@ -613,10 +631,10 @@ h1, h2, h3, h4, h5, h6 {
    ========================================= */
 .fab-whatsapp {
     position: fixed;
-    bottom: var(--spacing-lg);
-    left: var(--spacing-lg);
-    width: 60px;
-    height: 60px;
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+    width: 45px;
+    height: 45px;
     background-color: #25D366; /* Official WhatsApp Green */
     color: white;
     border-radius: 50%;
@@ -635,8 +653,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fab-whatsapp svg {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     fill: currentColor;
 }
 
@@ -722,6 +740,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Small Mobile Adjustments */
 @media (max-width: 576px) {
+    .hero-logo img {
+        height: 40px;
+    }
+    
     .hero-text-col h1 {
         font-size: 2rem; /* Further scale down for small screens */
     }

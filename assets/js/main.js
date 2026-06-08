@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const slides = document.querySelectorAll('.text-slide');
     const heroSection = document.getElementById('hero');
     let currentSlide = 0;
-    const slideInterval = 5000; // 5 seconds
+    const slideInterval = 8000; // 8 seconds, slower slide change
 
     function nextSlide() {
         slides[currentSlide].classList.remove('active');
