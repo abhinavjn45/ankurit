@@ -222,76 +222,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================================
-   Hanging Logo Animation
+   Top Corner Logos
    ========================================= */
-.hanging-logo {
-    position: relative;
-    margin-bottom: 2rem;
-    display: inline-block; /* Shrink-wrap for thread positioning */
-    transform-origin: 50% -50vh; /* Pivot point far above for a natural pendulum arc */
-    animation: dropIn 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards, 
-               infiniteSwing 6s linear infinite 1.5s;
-}
-
-/* Threads */
-.hanging-logo::before,
-.hanging-logo::after {
-    content: '';
+.top-corner-logo {
     position: absolute;
-    bottom: 80%; /* Start slightly inside the logo so it connects physically */
-    width: 3px; /* Slightly thicker to see the thread texture */
-    height: 100vh; /* Extend off-screen */
-    z-index: -1;
-    /* 3D cylindrical lighting */
-    box-shadow: inset 1px 0 1px rgba(255, 255, 255, 0.3),
-                inset -1px 0 1px rgba(0, 0, 0, 0.3);
+    top: 40px;
+    width: 130px;
+    z-index: 100;
 }
 
-/* Left Thread (Orange) -> "A" */
-.hanging-logo::before {
-    left: 7%; /* Approximate position of 'A' */
-    background-color: var(--accent-primary);
-    /* Twisted thread texture */
-    background-image: repeating-linear-gradient(
-        -45deg,
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.25) 2px,
-        transparent 2px,
-        transparent 4px
-    );
+.top-corner-logo.left {
+    left: 40px;
 }
 
-/* Right Thread (Blue) -> "T" */
-.hanging-logo::after {
-    right: 6%; /* Approximate position of 'T' */
-    background-color: var(--accent-secondary);
-    /* Twisted thread texture */
-    background-image: repeating-linear-gradient(
-        -45deg,
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.25) 2px,
-        transparent 2px,
-        transparent 4px
-    );
+.top-corner-logo.right {
+    right: 40px;
 }
 
-/* Drop-in Animation */
-@keyframes dropIn {
-    0% {
-        transform: translateY(-100vh) rotate(-20deg);
+.top-corner-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .top-corner-logo {
+        top: 20px;
+        width: 90px;
     }
-    100% {
-        transform: translateY(0) rotate(0deg);
+    .top-corner-logo.left {
+        left: 20px;
     }
-}
-
-/* Continuous Wind Swing (Physics-based Easing) */
-@keyframes infiniteSwing {
-    0% { transform: translateY(0) rotate(0deg); animation-timing-function: ease-out; }
-    25% { transform: translateY(0) rotate(3deg); animation-timing-function: ease-in; }
-    50% { transform: translateY(0) rotate(0deg); animation-timing-function: ease-out; }
-    75% { transform: translateY(0) rotate(-3deg); animation-timing-function: ease-in; }
-    100% { transform: translateY(0) rotate(0deg); }
+    .top-corner-logo.right {
+        right: 20px;
+    }
 }
 
 /* =========================================
