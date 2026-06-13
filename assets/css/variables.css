@@ -32,3 +32,10 @@
     --radius-lg: 16px;
     --radius-full: 9999px;
 }
+
+/* Theme Overrides */
+body.founder-theme {
+    --accent-primary: #6fb6ff;
+    --accent-primary-hover: #509eed;
+    --accent-gradient: #6fb6ff;
+}

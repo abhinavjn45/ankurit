@@ -20,9 +20,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .keyword {
-    font-family: var(--font-accent);
     font-weight: 700;
-    font-size: 1.2em; /* Slightly larger to match visual weight of sans-serif */
+    color: var(--accent-primary);
 }
 
 /* Utilities */
@@ -177,6 +176,33 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding: 2rem 0;
 }
+
+/* =========================================
+   Parallax Stacking Effect
+   ========================================= */
+.stack-section {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    padding: 15vh 5% 10vh;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 -20px 40px rgba(0,0,0,0.15); /* Cast shadow upward onto previous section */
+}
+
+/* Ensure z-indexes stack correctly */
+.stack-section:nth-child(1) { z-index: 1; }
+.stack-section:nth-child(2) { z-index: 2; }
+.stack-section:nth-child(3) { z-index: 3; }
+.stack-section:nth-child(4) { z-index: 4; }
+.stack-section:nth-child(5) { z-index: 5; }
+.stack-section:nth-child(6) { z-index: 6; }
+.stack-section:nth-child(7) { z-index: 7; }
+.stack-section:nth-child(8) { z-index: 8; }
+.stack-section:nth-child(9) { z-index: 9; }
+.stack-section:nth-child(10) { z-index: 10; }
+.stack-section:nth-child(11) { z-index: 11; }
+.stack-section:nth-child(12) { z-index: 12; }
 
 .timeline::before {
     content: '';

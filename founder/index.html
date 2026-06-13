@@ -16,59 +16,9 @@
     <link rel="stylesheet" href="../assets/css/variables.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 
-    <!-- Founder Theme Override -->
-    <style>
-        :root {
-            /* Force the primary accent to be Founder Blue */
-            --accent-primary: #6fb6ff;
-            --accent-primary-hover: #509eed;
-        }
-        
-        .page-header {
-            padding: 150px 5% 50px;
-            text-align: center;
-        }
-        
-        .section-padding {
-            padding: 100px 5%;
-        }
-
-        .bg-light-glow {
-            background: radial-gradient(circle at center, rgba(111, 182, 255, 0.05) 0%, transparent 70%);
-        }
-
-        /* Typography spacing specific to long-form text blocks */
-        .text-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .text-content ul {
-            list-style: none;
-            padding: 0;
-            margin: 2rem 0;
-        }
-
-        .text-content li {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .text-content li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent-primary);
-            font-weight: bold;
-        }
-    </style>
 </head>
 
-<body>
+<body class="founder-theme">
 
     <!-- Header Section -->
     <header id="main-header">
@@ -99,174 +49,171 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="page-header bg-light-glow">
-            <div class="container" style="max-width: 900px; margin: 0 auto;">
-                <span class="sub-heading" style="color: var(--accent-primary); display: block; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">For Founders</span>
-                <h1 style="font-size: 4rem; margin-bottom: 2rem;">You already know <br>this <span class="keyword">feeling.</span></h1>
-                <div class="text-content" style="text-align: left; background: rgba(255,255,255,0.03); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-                    <p>It’s late. The decision is yours alone.</p>
-                    <p>You can’t tell your co-founder they’re part of the problem. <br>
-                    You can’t tell your investor/mentor; it’ll sound like doubt. <br>
-                    You can’t tell your team; they might lose faith. <br>
-                    You can’t tell your family; they won't understand the weight.</p>
-                    <p style="font-size: 1.4rem; font-weight: 500; color: white; margin-top: 2rem;">So you decide alone. That is the decision I’m here for.</p>
+        <!-- Breadcrumb Hero -->
+        <section class="page-breadcrumb" style="background-color: #04213F; padding: 150px 5% 60px; text-align: left;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h1 style="color: var(--accent-primary); font-size: 3rem; margin: 0; font-weight: 600; letter-spacing: -1px;">For Founders</h1>
+            </div>
+        </section>
+
+        <!-- Intro Section (White Background) -->
+        <section class="stack-section" style="background-color: #ffffff; color: #333; padding-top: 100px;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+                <div class="grid-2" style="align-items: start; gap: 4rem;">
+                    <div>
+                        <h2 style="font-size: 4.5rem; line-height: 1.1; letter-spacing: -2px; margin: 0; text-align: left; color: #04213F;">
+                            You already <br>know this <br>feeling.
+                        </h2>
+                    </div>
+                    <div style="border-left: 2px solid rgba(4,33,63,0.1); padding-left: 3rem; text-align: left;">
+                        <p style="font-size: 1.5rem; color: #333; margin-bottom: 2rem; font-weight: 500;">It’s late. The decision is yours alone.</p>
+                        
+                        <ul style="list-style: none; padding: 0; color: #555; font-size: 1.1rem; line-height: 2; margin-bottom: 3rem;">
+                            <li style="margin-bottom: 0.5rem; padding-left: 0;">&mdash; You can’t tell your co-founder they’re part of the problem.</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 0;">&mdash; You can’t tell your investor; it’ll sound like doubt.</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 0;">&mdash; You can’t tell your team; they might lose faith.</li>
+                            <li style="margin-bottom: 0.5rem; padding-left: 0;">&mdash; You can’t tell your family; they won't understand the weight.</li>
+                        </ul>
+
+                        <p style="font-size: 1.6rem; color: #04213F; font-family: var(--font-heading); font-weight: 600; margin: 0; line-height: 1.4;">
+                            So you decide alone.<br>
+                            <span style="color: var(--accent-primary);">That is the decision I’m here for.</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- What a Thinking Partner is -->
-        <section class="section-padding">
-            <div class="container" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <!-- What a Thinking Partner is (Dark Background) -->
+        <section class="stack-section" style="background-color: #04213F; color: #ffffff;">
+            <div class="container" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%;">
                 <div>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">What a <span class="keyword">Thinking Partner</span> is</h2>
-                    <div class="text-content">
-                        <p>I am the person you call before you make the call. Sometimes the problem isn’t the decision, It’s trying to think clearly while carrying too much at once. I help you see which ones actually matter.</p>
+                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.1;">What a <br><span style="color: var(--accent-primary);">Thinking Partner</span> is</h2>
+                    <div style="font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.8;">
+                        <p style="margin-bottom: 1.5rem;">I am the person you call before you make the call. Sometimes the problem isn’t the decision, It’s trying to think clearly while carrying too much at once. I help you see which ones actually matter.</p>
                         <p>I don’t tell you what to do. I don’t push opinions or frameworks. I help you slow things down so you can hear what you already know.</p>
                     </div>
                 </div>
-                <div class="card-glass" style="padding: 2.5rem;">
-                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-primary);">In our sessions:</h3>
-                    <div class="text-content">
-                        <ul>
-                            <li>We name the question you’ve been circling but haven't said out loud.</li>
-                            <li>We walk every path, including the one you’ve been avoiding.</li>
-                            <li>We slow down the discussion until the real issue comes into focus.</li>
-                        </ul>
-                        <p style="font-style: italic; color: white;">"You walk in carrying the weight alone. You walk out with a clearer next move."</p>
-                    </div>
+                <div style="padding: 3rem; background: rgba(0,0,0,0.2); border-left: 4px solid var(--accent-primary);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">In our sessions:</h3>
+                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                        <li style="margin-bottom: 1rem;">&mdash; We name the question you’ve been circling but haven't said out loud.</li>
+                        <li style="margin-bottom: 1rem;">&mdash; We walk every path, including the one you’ve been avoiding.</li>
+                        <li>&mdash; We slow down the discussion until the real issue comes into focus.</li>
+                    </ul>
+                    <p style="font-style: italic; color: var(--accent-primary); font-size: 1.1rem;">"You walk in carrying the weight alone. You walk out with a clearer next move."</p>
                 </div>
             </div>
         </section>
 
-        <!-- Rules of the Room -->
-        <section class="section-padding bg-light-glow">
-            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">The Rules of the <span class="keyword">Room</span></h2>
+        <!-- Rules of the Room (White Background) -->
+        <section class="stack-section" style="background-color: #ffffff; color: #333;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center; width: 100%;">
+                <h2 style="font-size: 3rem; margin-bottom: 4rem; color: #04213F;">The Rules of the <span style="color: var(--accent-primary);">Room</span></h2>
                 <div class="grid-3">
-                    <div class="card-glass hover-lift" style="padding: 2.5rem; text-align: left;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: white;">01. Absolute Confidentiality</h3>
-                        <p style="color: rgba(255,255,255,0.7);">No reporting. No leaks. This is a secure space.</p>
+                    <div style="padding: 2.5rem; text-align: left; border-top: 3px solid var(--accent-primary);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #04213F;">01. Absolute Confidentiality</h3>
+                        <p style="color: #555; line-height: 1.6; font-size: 1.1rem;">No reporting. No leaks. This is a secure space.</p>
                     </div>
-                    <div class="card-glass hover-lift" style="padding: 2.5rem; text-align: left;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: white;">02. Total Neutrality</h3>
-                        <p style="color: rgba(255,255,255,0.7);">I sit entirely outside your cap table and team dynamics, giving you an unbiased sounding board.</p>
+                    <div style="padding: 2.5rem; text-align: left; border-top: 3px solid var(--accent-primary);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #04213F;">02. Total Neutrality</h3>
+                        <p style="color: #555; line-height: 1.6; font-size: 1.1rem;">I sit entirely outside your cap table and team dynamics, giving you an unbiased sounding board.</p>
                     </div>
-                    <div class="card-glass hover-lift" style="padding: 2.5rem; text-align: left;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: white;">03. Radical Honesty</h3>
-                        <p style="color: rgba(255,255,255,0.7);">Drop the founder persona. There is no pressure to perform or have it all figured out.</p>
+                    <div style="padding: 2.5rem; text-align: left; border-top: 3px solid var(--accent-primary);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #04213F;">03. Radical Honesty</h3>
+                        <p style="color: #555; line-height: 1.6; font-size: 1.1rem;">Drop the founder persona. There is no pressure to perform or have it all figured out.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- When to reach out -->
-        <section class="section-padding">
-            <div class="container" style="max-width: 1000px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">When founders usually <span class="keyword">reach out</span></h2>
+        <!-- When to reach out (Dark Background) -->
+        <section class="stack-section" style="background-color: #04213F; color: #ffffff;">
+            <div class="container" style="max-width: 1000px; margin: 0 auto; width: 100%;">
+                <h2 style="font-size: 3rem; margin-bottom: 4rem; text-align: center;">When founders usually <span style="color: var(--accent-primary);">reach out</span></h2>
                 <div class="grid-2">
-                    <div class="card-glass" style="padding: 2rem; border-left: 4px solid var(--accent-primary);">
-                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: white;">The Co-Founder Conversation</h3>
-                        <p style="color: rgba(255,255,255,0.7);">Before a difficult co-founder conversation. So you know what you actually want before you sit across from them.</p>
+                    <div style="padding: 2rem; border-left: 2px solid rgba(255,255,255,0.2);">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-primary);">The Co-Founder Conversation</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">Before a difficult co-founder conversation. So you know what you actually want before you sit across from them.</p>
                     </div>
-                    <div class="card-glass" style="padding: 2rem; border-left: 4px solid var(--accent-primary);">
-                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: white;">The Senior Hiring Bet</h3>
-                        <p style="color: rgba(255,255,255,0.7);">Thinking through the role and your reasons for the hire before it becomes a year of regret.</p>
+                    <div style="padding: 2rem; border-left: 2px solid rgba(255,255,255,0.2);">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-primary);">The Senior Hiring Bet</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">Thinking through the role and your reasons for the hire before it becomes a year of regret.</p>
                     </div>
-                    <div class="card-glass" style="padding: 2rem; border-left: 4px solid var(--accent-primary);">
-                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: white;">When something feels "off"</h3>
-                        <p style="color: rgba(255,255,255,0.7);">It's not a crisis yet, but you need to understand the quiet feeling that something isn’t right.</p>
+                    <div style="padding: 2rem; border-left: 2px solid rgba(255,255,255,0.2);">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-primary);">When something feels "off"</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">It's not a crisis yet, but you need to understand the quiet feeling that something isn’t right.</p>
                     </div>
-                    <div class="card-glass" style="padding: 2rem; border-left: 4px solid var(--accent-primary);">
-                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: white;">The Shift to Leader</h3>
-                        <p style="color: rgba(255,255,255,0.7);">The shift from Builder to Leader. Navigating the identity shift so you don’t become the bottleneck as you scale.</p>
+                    <div style="padding: 2rem; border-left: 2px solid rgba(255,255,255,0.2);">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-primary);">The Shift to Leader</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">The shift from Builder to Leader. Navigating the identity shift so you don’t become the bottleneck as you scale.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- How it works -->
-        <section class="section-padding bg-light-glow">
-            <div class="container" style="max-width: 1000px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 4rem; text-align: center;">How it <span class="keyword">works</span></h2>
+        <!-- How it works (White Background) -->
+        <section class="stack-section" style="background-color: #ffffff; color: #333;">
+            <div class="container" style="max-width: 1000px; margin: 0 auto; width: 100%;">
+                <h2 style="font-size: 3rem; margin-bottom: 4rem; text-align: center; color: #04213F;">How it <span style="color: var(--accent-primary);">works</span></h2>
                 
-                <div class="timeline">
-                    <!-- Step 1 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker">01</div>
-                        <div class="timeline-content card-glass hover-lift">
-                            <h3>Rhythm & Pace</h3>
-                            <p>Weekly or Biweekly sessions. 60 minutes, over video or in Bangalore. A rhythm that fits the pace of your decisions.</p>
-                        </div>
+                <div class="grid-2" style="gap: 3rem;">
+                    <div>
+                        <h3 style="font-size: 1.4rem; color: #04213F; margin-bottom: 0.5rem;">01. Rhythm & Pace</h3>
+                        <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">Weekly or Biweekly sessions. 60 minutes, over video or in Bangalore. A rhythm that fits the pace of your decisions.</p>
                     </div>
-                    <!-- Step 2 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker">02</div>
-                        <div class="timeline-content card-glass hover-lift">
-                            <h3>16/6 Access</h3>
-                            <p>Same-day response when something breaks, a co-founder blow-up, a term sheet, or a hire falling apart.</p>
-                        </div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; color: #04213F; margin-bottom: 0.5rem;">02. 16/6 Access</h3>
+                        <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">Same-day response when something breaks, a co-founder blow-up, a term sheet, or a hire falling apart.</p>
                     </div>
-                    <!-- Step 3 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker">03</div>
-                        <div class="timeline-content card-glass hover-lift">
-                            <h3>Compounding Context</h3>
-                            <p>We never look at a problem in isolation. I help you recognise your past compromises that are shaping today's reality.</p>
-                        </div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; color: #04213F; margin-bottom: 0.5rem;">03. Compounding Context</h3>
+                        <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">We never look at a problem in isolation. I help you recognise your past compromises that are shaping today's reality.</p>
                     </div>
-                    <!-- Step 4 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker">04</div>
-                        <div class="timeline-content card-glass hover-lift">
-                            <h3>Active Pattern Tracking</h3>
-                            <p>I help you step back and see your habits, so you catch the blind spots before they happen.</p>
-                        </div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; color: #04213F; margin-bottom: 0.5rem;">04. Active Pattern Tracking</h3>
+                        <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">I help you step back and see your habits, so you catch the blind spots before they happen.</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Placeholder Testimonials -->
-        <section class="section-padding">
-            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Words from <span class="keyword">Founders</span></h2>
+        <!-- Testimonials (Dark Background) -->
+        <section class="stack-section" style="background-color: #04213F; color: #ffffff;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center; width: 100%;">
+                <h2 style="font-size: 3rem; margin-bottom: 4rem;">Words from <span style="color: var(--accent-primary);">Founders</span></h2>
                 <div class="grid-3">
-                    <div class="card-glass" style="padding: 2.5rem; text-align: left; position: relative;">
-                        <svg style="position: absolute; top: 1rem; right: 1rem; width: 40px; opacity: 0.1; fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                        <p style="font-style: italic; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
-                        <h4 style="color: white; margin-bottom: 0.2rem;">Founder Name</h4>
+                    <div style="padding: 2.5rem; text-align: left; background: rgba(0,0,0,0.2); border-top: 3px solid var(--accent-primary);">
+                        <p style="font-style: italic; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; line-height: 1.6;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
+                        <h4 style="color: white; margin-bottom: 0.2rem; font-size: 1.2rem;">Founder Name</h4>
                         <p style="font-size: 0.9rem; color: var(--accent-primary);">Startup / Company</p>
                     </div>
-                    <div class="card-glass" style="padding: 2.5rem; text-align: left; position: relative;">
-                        <svg style="position: absolute; top: 1rem; right: 1rem; width: 40px; opacity: 0.1; fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                        <p style="font-style: italic; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
-                        <h4 style="color: white; margin-bottom: 0.2rem;">Founder Name</h4>
+                    <div style="padding: 2.5rem; text-align: left; background: rgba(0,0,0,0.2); border-top: 3px solid var(--accent-primary);">
+                        <p style="font-style: italic; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; line-height: 1.6;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
+                        <h4 style="color: white; margin-bottom: 0.2rem; font-size: 1.2rem;">Founder Name</h4>
                         <p style="font-size: 0.9rem; color: var(--accent-primary);">Startup / Company</p>
                     </div>
-                    <div class="card-glass" style="padding: 2.5rem; text-align: left; position: relative;">
-                        <svg style="position: absolute; top: 1rem; right: 1rem; width: 40px; opacity: 0.1; fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                        <p style="font-style: italic; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
-                        <h4 style="color: white; margin-bottom: 0.2rem;">Founder Name</h4>
+                    <div style="padding: 2.5rem; text-align: left; background: rgba(0,0,0,0.2); border-top: 3px solid var(--accent-primary);">
+                        <p style="font-style: italic; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; line-height: 1.6;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
+                        <h4 style="color: white; margin-bottom: 0.2rem; font-size: 1.2rem;">Founder Name</h4>
                         <p style="font-size: 0.9rem; color: var(--accent-primary);">Startup / Company</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section id="contact" class="section-padding bg-light-glow" style="border-top: 1px solid rgba(255,255,255,0.05);">
-            <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">If you have read this far...</h2>
-                <p style="font-size: 1.3rem; color: rgba(255,255,255,0.8); margin-bottom: 3rem;">You probably have a decision in mind. Let’s put it on the table and see if thinking it through together helps.</p>
+        <!-- CTA Section (White Background) -->
+        <section class="stack-section" style="background-color: #ffffff; color: #333;">
+            <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center; width: 100%;">
+                <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #04213F;">If you have read this far...</h2>
+                <p style="font-size: 1.3rem; color: #555; margin-bottom: 3rem; line-height: 1.6;">You probably have a decision in mind. Let’s put it on the table and see if thinking it through together helps.</p>
                 
-                <a href="https://calendly.com/" target="_blank" class="btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">
+                <a href="https://calendly.com/" target="_blank" class="btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem; background: var(--accent-primary); color: #04213F; font-weight: 600;">
                     Book a 30-minute Introductory call 
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 20" class="icon-right"><path d="M0 10 L68 10 M58 2 L68 10 L58 18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 20" class="icon-right"><path d="M0 10 L68 10 M58 2 L68 10 L58 18" stroke="#04213F" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
                 
-                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 1.5rem; font-style: italic;">This first conversation is simply to see if this way of thinking works for you. <br>No pressure to commit, just a quiet space to start.</p>
+                <p style="font-size: 1rem; color: #888; margin-top: 2rem; font-style: italic;">This first conversation is simply to see if this way of thinking works for you. <br>No pressure to commit, just a quiet space to start.</p>
             </div>
         </section>
     </main>
