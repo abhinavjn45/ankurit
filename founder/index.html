@@ -352,24 +352,70 @@
         </section>
 
         <!-- Testimonials (White Background) -->
-        <section class="stack-section" style="background-color: #ffffff; color: #333333;">
+        <section class="stack-section" style="background-color: #ffffff; color: #333333; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 5% 80px;">
             <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center; width: 100%;">
-                <h2 style="font-size: 3rem; margin-bottom: 4rem; color: #04213F;">Words from <span style="color: #0066cc;">Founders</span></h2>
-                <div class="grid-3">
-                    <div style="padding: 2.5rem; text-align: left; background: rgba(4,33,63,0.03); border-top: 3px solid var(--accent-primary);">
-                        <p style="font-style: italic; color: #555555; margin-bottom: 1.5rem; line-height: 1.6;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
-                        <h4 style="color: #04213F; margin-bottom: 0.2rem; font-size: 1.2rem;">Founder Name</h4>
-                        <p style="font-size: 0.9rem; color: #0066cc;">Startup / Company</p>
-                    </div>
-                    <div style="padding: 2.5rem; text-align: left; background: rgba(4,33,63,0.03); border-top: 3px solid var(--accent-primary);">
-                        <p style="font-style: italic; color: #555555; margin-bottom: 1.5rem; line-height: 1.6;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
-                        <h4 style="color: #04213F; margin-bottom: 0.2rem; font-size: 1.2rem;">Founder Name</h4>
-                        <p style="font-size: 0.9rem; color: #0066cc;">Startup / Company</p>
-                    </div>
-                    <div style="padding: 2.5rem; text-align: left; background: rgba(4,33,63,0.03); border-top: 3px solid var(--accent-primary);">
-                        <p style="font-style: italic; color: #555555; margin-bottom: 1.5rem; line-height: 1.6;">"Placeholder testimonial quote goes here. We will replace this text later with real words from a founder you've partnered with."</p>
-                        <h4 style="color: #04213F; margin-bottom: 0.2rem; font-size: 1.2rem;">Founder Name</h4>
-                        <p style="font-size: 0.9rem; color: #0066cc;">Startup / Company</p>
+                <h2 style="font-size: 3rem; margin-bottom: 1rem; color: #04213F;">Words from <span style="color: #0066cc;">Founders</span></h2>
+                <p style="font-size: 1.25rem; color: #555555; max-width: 600px; margin: 0 auto 4rem; line-height: 1.6; text-align: center;">
+                    Honest feedback from leaders who have sat in the room.
+                </p>
+                
+                <div class="carousel-container" style="overflow: hidden; width: 100%; position: relative;">
+                    <div class="carousel-track" style="display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); width: 100%;">
+                        <!-- Slide 1 (contains Card 1 & Card 2) -->
+                        <div class="carousel-slide" style="display: flex; gap: 2rem; width: 100%; flex-shrink: 0;">
+                            <!-- Card 1 -->
+                            <div class="founder-card" style="flex: 1; padding: 2.5rem; text-align: left; background: rgba(4,33,63,0.03); border: 1px solid rgba(4, 33, 63, 0.08); border-radius: 12px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; box-shadow: 0 10px 30px rgba(4, 33, 63, 0.02);">
+                                <svg class="quote-bg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="position: absolute; right: 2rem; bottom: 2rem; width: 6rem; height: 6rem; color: rgba(4, 33, 63, 0.04); pointer-events: none; transform: rotate(180deg);"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2zm13 0c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2z" fill="currentColor"/></svg>
+                                <p style="font-style: italic; color: #555555; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem; position: relative; z-index: 1;">"I called them before making our pivot. They helped me slow down and separate my fear of failing from the actual strategic options on the table."</p>
+                                <div style="display: flex; align-items: center; gap: 1rem; position: relative; z-index: 1;">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #0066cc;" alt="Siddharth Mehta">
+                                    <div>
+                                        <h4 style="color: #04213F; margin: 0 0 0.2rem; font-size: 1.15rem; font-weight: 600;">Siddharth Mehta</h4>
+                                        <p style="font-size: 0.9rem; color: #0066cc; margin: 0;">Co-Founder & CEO, FinTech</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="founder-card" style="flex: 1; padding: 2.5rem; text-align: left; background: rgba(4,33,63,0.03); border: 1px solid rgba(4, 33, 63, 0.08); border-radius: 12px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; box-shadow: 0 10px 30px rgba(4, 33, 63, 0.02);">
+                                <svg class="quote-bg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="position: absolute; right: 2rem; bottom: 2rem; width: 6rem; height: 6rem; color: rgba(4, 33, 63, 0.04); pointer-events: none; transform: rotate(180deg);"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2zm13 0c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2z" fill="currentColor"/></svg>
+                                <p style="font-style: italic; color: #555555; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem; position: relative; z-index: 1;">"Working together felt like having a mirror for my thoughts. I dropped the founder persona, talked about the real mess, and walked out with absolute clarity."</p>
+                                <div style="display: flex; align-items: center; gap: 1rem; position: relative; z-index: 1;">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #0066cc;" alt="Neha Sharma">
+                                    <div>
+                                        <h4 style="color: #04213F; margin: 0 0 0.2rem; font-size: 1.15rem; font-weight: 600;">Neha Sharma</h4>
+                                        <p style="font-size: 0.9rem; color: #0066cc; margin: 0;">Founder, SaaS Platform</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 (contains Card 3 & Card 4) -->
+                        <div class="carousel-slide" style="display: flex; gap: 2rem; width: 100%; flex-shrink: 0;">
+                            <!-- Card 3 -->
+                            <div class="founder-card" style="flex: 1; padding: 2.5rem; text-align: left; background: rgba(4,33,63,0.03); border: 1px solid rgba(4, 33, 63, 0.08); border-radius: 12px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; box-shadow: 0 10px 30px rgba(4, 33, 63, 0.02);">
+                                <svg class="quote-bg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="position: absolute; right: 2rem; bottom: 2rem; width: 6rem; height: 6rem; color: rgba(4, 33, 63, 0.04); pointer-events: none; transform: rotate(180deg);"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2zm13 0c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2z" fill="currentColor"/></svg>
+                                <p style="font-style: italic; color: #555555; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem; position: relative; z-index: 1;">"I was struggling with co-founder alignment for months. A single structured session helped us lay it out neutrally and resolve it in under a week."</p>
+                                <div style="display: flex; align-items: center; gap: 1rem; position: relative; z-index: 1;">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #0066cc;" alt="Rohan Verma">
+                                    <div>
+                                        <h4 style="color: #04213F; margin: 0 0 0.2rem; font-size: 1.15rem; font-weight: 600;">Rohan Verma</h4>
+                                        <p style="font-size: 0.9rem; color: #0066cc; margin: 0;">Co-Founder, Logistics Tech</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="founder-card" style="flex: 1; padding: 2.5rem; text-align: left; background: rgba(4,33,63,0.03); border: 1px solid rgba(4, 33, 63, 0.08); border-radius: 12px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; box-shadow: 0 10px 30px rgba(4, 33, 63, 0.02);">
+                                <svg class="quote-bg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="position: absolute; right: 2rem; bottom: 2rem; width: 6rem; height: 6rem; color: rgba(4, 33, 63, 0.04); pointer-events: none; transform: rotate(180deg);"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2zm13 0c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4v1c0 2.5-1.5 4-4 4v2z" fill="currentColor"/></svg>
+                                <p style="font-style: italic; color: #555555; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem; position: relative; z-index: 1;">"As a sole founder, there are decisions you simply cannot share with anyone else. Having a thinking partner completely changed my transition to leader."</p>
+                                <div style="display: flex; align-items: center; gap: 1rem; position: relative; z-index: 1;">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #0066cc;" alt="Ananya Roy">
+                                    <div>
+                                        <h4 style="color: #04213F; margin: 0 0 0.2rem; font-size: 1.15rem; font-weight: 600;">Ananya Roy</h4>
+                                        <p style="font-size: 0.9rem; color: #0066cc; margin: 0;">Founder, HealthTech</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

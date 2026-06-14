@@ -993,19 +993,14 @@ h6 {
     left: 50%;
     width: 0;
     height: 3px;
-    background: #0066cc;
+    background: var(--accent-primary);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(-50%);
+    z-index: 10;
 }
 
 .founder-card:hover::before {
     width: 100%;
-}
-
-/* For dark background sections, use the primary accent color */
-.stack-section[style*="background-color: #04213F"] .founder-card::before,
-.stack-section[style*="background-color:#04213F"] .founder-card::before {
-    background: var(--accent-primary);
 }
 
 /* =========================================
@@ -1263,6 +1258,11 @@ h6 {
 
     .founder-cards-grid, .founder-cards-grid-3, .partner-grid {
         grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .carousel-slide {
+        flex-direction: column !important;
         gap: 1.5rem !important;
     }
 }

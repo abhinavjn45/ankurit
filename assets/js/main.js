@@ -120,6 +120,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.addEventListener('resize', updateTimelineProgress);
     setTimeout(updateTimelineProgress, 150);
 
+    // Testimonials Carousel Auto-Scroll Logic
+    const track = document.querySelector('.carousel-track');
+    const container = document.querySelector('.carousel-container');
+    if (track && container) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        let index = 0;
+        let intervalId = null;
+
+        function startCarousel() {
+            if (intervalId) return;
+            intervalId = setInterval(() => {
+                index = (index + 1) % slides.length;
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }, 6000); // Transition every 6 seconds
+        }
+
+        function stopCarousel() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+        container.addEventListener('mouseenter', stopCarousel);
+        container.addEventListener('mouseleave', startCarousel);
+        container.addEventListener('touchstart', stopCarousel, { passive: true });
+        container.addEventListener('touchend', startCarousel, { passive: true });
+
+        startCarousel();
+    }
+
     // 2. Load Dynamic Data from Google Sheets
     const dataContainer = document.getElementById('data-container');
     if (dataContainer) {
