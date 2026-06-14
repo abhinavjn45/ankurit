@@ -1011,4 +1011,8 @@ h1, h2, h3, h4, h5, h6 {
         padding: 4rem 5% !important;
         box-shadow: none !important;
     }
+    .founder-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
 }
