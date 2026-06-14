@@ -145,6 +145,12 @@ h6 {
     padding: 0 1rem;
 }
 
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -159,6 +165,7 @@ h6 {
 
 @media (max-width: 900px) {
 
+    .grid-4,
     .grid-3,
     .grid-2 {
         grid-template-columns: 1fr;
@@ -969,6 +976,36 @@ h6 {
     width: 30px;
     height: 30px;
     fill: currentColor;
+}
+
+/* =========================================
+   Founder Cards & Hover Effects
+   ========================================= */
+.founder-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.founder-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #0066cc;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.founder-card:hover::before {
+    width: 100%;
+}
+
+/* For dark background sections, use the primary accent color */
+.stack-section[style*="background-color: #04213F"] .founder-card::before,
+.stack-section[style*="background-color:#04213F"] .founder-card::before {
+    background: var(--accent-primary);
 }
 
 /* =========================================
