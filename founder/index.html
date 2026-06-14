@@ -296,26 +296,56 @@
         </section>
 
         <!-- How it works (Dark Background - #04213F) -->
-        <section class="stack-section" style="background-color: #04213F; color: #ffffff;">
+        <section class="stack-section" style="background-color: #04213F; color: #ffffff; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 5% 80px;">
             <div class="container" style="max-width: 1200px; margin: 0 auto; width: 100%;">
-                <h2 style="font-size: 3rem; margin-bottom: 4rem; text-align: center; color: #ffffff;">How it <span style="color: var(--accent-primary);">works</span></h2>
+                <h2 style="font-size: 3rem; margin-bottom: 1rem; text-align: center; color: #ffffff;">How it <span style="color: var(--accent-primary);">works</span></h2>
+                <p style="font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 4rem; line-height: 1.6; text-align: center;">
+                    A structured process designed to fit the speed and scale of your choices.
+                </p>
                 
-                <div class="grid-2" style="gap: 3rem;">
-                    <div>
-                        <h3 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 0.5rem;">01. Rhythm & Pace</h3>
-                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">Weekly or Biweekly sessions. 60 minutes, over video or in Bangalore. A rhythm that fits the pace of your decisions.</p>
+                <div class="timeline-container">
+                    <div class="timeline-line">
+                        <div class="timeline-progress"></div>
                     </div>
-                    <div>
-                        <h3 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 0.5rem;">02. 16/6 Access</h3>
-                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">Same-day response when something breaks, a co-founder blow-up, a term sheet, or a hire falling apart.</p>
+                    
+                    <!-- Step 1 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="founder-card timeline-card">
+                            <span class="timeline-number">01</span>
+                            <h3 class="timeline-title">Rhythm & Pace</h3>
+                            <p class="timeline-desc">Weekly or Biweekly sessions. 60 minutes, over video or in Bangalore. A rhythm that fits the pace of your decisions.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 0.5rem;">03. Compounding Context</h3>
-                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">We never look at a problem in isolation. I help you recognise your past compromises that are shaping today's reality.</p>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="founder-card timeline-card">
+                            <span class="timeline-number">02</span>
+                            <h3 class="timeline-title">16/6 Access</h3>
+                            <p class="timeline-desc">Same-day response when something breaks, a co-founder blow-up, a term sheet, or a hire falling apart.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 0.5rem;">04. Active Pattern Tracking</h3>
-                        <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6;">I help you step back and see your habits, so you catch the blind spots before they happen.</p>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="founder-card timeline-card">
+                            <span class="timeline-number">03</span>
+                            <h3 class="timeline-title">Compounding Context</h3>
+                            <p class="timeline-desc">We never look at a problem in isolation. I help you recognise your past compromises that are shaping today's reality.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="founder-card timeline-card">
+                            <span class="timeline-number">04</span>
+                            <h3 class="timeline-title">Active Pattern Tracking</h3>
+                            <p class="timeline-desc">I help you step back and see your habits, so you catch the blind spots before they happen.</p>
+                        </div>
                     </div>
                 </div>
             </div>

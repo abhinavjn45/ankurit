@@ -65,6 +65,61 @@ document.addEventListener('DOMContentLoaded', async () => {
         scrollObserver.observe(el);
     });
 
+    // Dynamic adjustment for sticky sections taller than viewport
+    function adjustStickySections() {
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.stack-section').forEach(section => {
+                section.style.top = 'auto';
+            });
+            return;
+        }
+
+        const sections = document.querySelectorAll('.stack-section');
+        sections.forEach(section => {
+            const height = section.getBoundingClientRect().height;
+            const viewportHeight = window.innerHeight;
+            if (height > viewportHeight) {
+                // Section is taller than viewport: allow scrolling completely before sticking
+                section.style.top = `${viewportHeight - height}px`;
+            } else {
+                // Fits inside viewport: stick at the top
+                section.style.top = '0px';
+            }
+        });
+    }
+
+    // Run after DOM content is loaded and elements have their sizes calculated
+    setTimeout(adjustStickySections, 100);
+    window.addEventListener('resize', adjustStickySections);
+    window.addEventListener('load', adjustStickySections);
+
+    // Animated timeline progress fill
+    function updateTimelineProgress() {
+        const timeline = document.querySelector('.timeline-container');
+        if (!timeline) return;
+
+        const progress = timeline.querySelector('.timeline-progress');
+        if (!progress) return;
+
+        const rect = timeline.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const totalHeight = rect.height;
+
+        // Start filling when the top of the timeline hits 70% of viewport height
+        const startLimit = viewportHeight * 0.7;
+        // Reach 100% exactly when the bottom of the timeline hits the bottom of the viewport (where scrolling ends)
+        const endLimit = viewportHeight - totalHeight;
+
+        let percent = (startLimit - rect.top) / (startLimit - endLimit);
+        percent = Math.min(Math.max(percent * 100, 0), 100);
+
+        progress.style.height = `${percent}%`;
+    }
+
+    window.addEventListener('scroll', updateTimelineProgress);
+    window.addEventListener('resize', updateTimelineProgress);
+    setTimeout(updateTimelineProgress, 150);
+
     // 2. Load Dynamic Data from Google Sheets
     const dataContainer = document.getElementById('data-container');
     if (dataContainer) {
