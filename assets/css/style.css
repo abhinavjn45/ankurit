@@ -409,13 +409,13 @@ h6 {
 
 .hero-text-col {
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
+    padding: 0 2%;
     text-align: center;
 }
 
@@ -537,7 +537,7 @@ h6 {
 }
 
 .keyword {
-    font-family: 'Caveat', cursive;
+    /* font-family: 'Caveat', cursive; */
     color: var(--accent-primary);
     font-weight: 700;
     font-style: italic;
@@ -1003,6 +1003,24 @@ h6 {
     width: 100%;
 }
 
+/* Hero List Items without Cards */
+.hero-list-item {
+    position: relative;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: left;
+}
+
+/* Bottom border and hover line only for the first row (first 2 items) */
+.founder-cards-grid .hero-list-item:nth-child(1),
+.founder-cards-grid .hero-list-item:nth-child(2) {
+    border-bottom: 2px solid #04213F;
+}
+
+
 /* =========================================
    Timeline / How it Works Style
    ========================================= */
@@ -1265,4 +1283,42 @@ h6 {
         flex-direction: column !important;
         gap: 1.5rem !important;
     }
+}
+
+/* =========================================
+   Light Theme Navbar Overrides for Founders Page
+   ========================================= */
+.founder-theme .nav-links a:not(.btn-primary) {
+    color: #111111 !important;
+}
+
+.founder-theme .nav-links a:not(.btn-primary):hover,
+.founder-theme .nav-links a.active:not(.btn-primary) {
+    color: #0066cc !important;
+}
+
+.founder-theme .mobile-menu-btn span {
+    background-color: #111111 !important;
+}
+
+/* Timeline Light Theme Overrides */
+.founder-theme .timeline-card {
+    background: rgba(4, 33, 63, 0.02) !important;
+    border: 1px solid rgba(4, 33, 63, 0.08) !important;
+}
+
+.founder-theme .timeline-title {
+    color: #0066cc !important;
+}
+
+.founder-theme .timeline-desc {
+    color: rgba(4, 33, 63, 0.7) !important;
+}
+
+.founder-theme .timeline-line {
+    background: rgba(4, 33, 63, 0.08) !important;
+}
+
+.founder-theme .timeline-dot {
+    background: #FAF3E0 !important;
 }
