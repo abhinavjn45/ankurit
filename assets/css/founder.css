@@ -1,0 +1,437 @@
+/* founder.css - Styles for the For Founders page */
+
+/* --- Sections & Layout --- */
+.founder-section-light-warm {
+    background-color: #FAF3E0;
+    color: #04213F;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-section-white {
+    background-color: #ffffff;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-section-white-dark-text {
+    background-color: #ffffff;
+    color: #04213F;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Paddings */
+.founder-intro-padding { padding: 150px 5% 100px; }
+.founder-callout-padding { padding: 100px 5% 60px; }
+.founder-standard-padding { padding: 120px 5% 80px; }
+.founder-cta-padding { padding: 120px 5% 0; }
+
+.founder-container-lg {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.founder-container-md {
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    width: 100%;
+}
+.founder-container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.founder-text-center { text-align: center; }
+.founder-text-left { text-align: left; }
+
+/* --- Typography --- */
+.founder-heading-xl {
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    margin: 0 auto 1.5rem;
+    color: #04213F;
+}
+
+.founder-heading-lg {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #04213F;
+}
+
+.founder-heading-md {
+    font-size: 2.2rem;
+    color: #04213F;
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-weight: 500;
+    margin: 0 auto;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+}
+
+.founder-heading-cta {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #04213F;
+}
+
+.founder-subtext-lg {
+    font-size: 1.6rem;
+    color: rgba(4, 33, 63, 0.8);
+    margin: 0 auto 4rem;
+    font-weight: 400;
+}
+
+.founder-subtext-md {
+    font-size: 1.25rem;
+    color: rgba(4, 33, 63, 0.7);
+    margin: 0 auto 4rem;
+    line-height: 1.6;
+}
+
+.founder-subtext-md-dark {
+    font-size: 1.25rem;
+    color: #555555;
+    margin: 0 auto 4rem;
+    line-height: 1.6;
+}
+
+.founder-subtext-cta {
+    font-size: 1.3rem;
+    color: rgba(4, 33, 63, 0.7);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.founder-highlight-inline {
+    color: var(--accent-primary, #6fb6ff);
+}
+
+.founder-highlight-block {
+    color: #6fb6ff;
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    letter-spacing: -1.5px;
+}
+
+.founder-highlight-block-sm {
+    color: #6fb6ff;
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    letter-spacing: -1.5px;
+    font-style: normal;
+}
+
+/* --- Cards & Components --- */
+.founder-number-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #04213F;
+    color: #FAF3E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.founder-card-heading {
+    color: #6fb6ff;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+}
+
+.founder-card-desc {
+    color: rgba(4, 33, 63, 0.7);
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.founder-card-desc-sm {
+    color: rgba(4, 33, 63, 0.7);
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.founder-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: left;
+}
+
+.founder-svg-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    color: #6fb6ff;
+    flex-shrink: 0;
+}
+
+/* Grids */
+.founder-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 6rem;
+}
+
+.founder-partner-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.founder-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    width: 100%;
+}
+
+/* Partner section */
+.founder-partner-text {
+    font-size: 1.25rem;
+    color: rgba(4, 33, 63, 0.85);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.founder-partner-text p {
+    margin-bottom: 1.5rem;
+}
+
+.founder-partner-text p:last-child {
+    margin-bottom: 0;
+}
+
+.founder-partner-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(4, 33, 63, 0.1);
+    border: 1px solid rgba(4, 33, 63, 0.1);
+}
+
+/* Rules section */
+.founder-rules-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #6fb6ff;
+}
+
+.founder-rules-desc {
+    color: rgba(4, 33, 63, 0.7);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Reach out section */
+.founder-reachout-heading {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #6fb6ff;
+    line-height: 1.3;
+    min-height: 3.8rem;
+}
+
+.founder-reachout-desc {
+    color: #555555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Carousel Testimonials */
+.founder-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.founder-carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+}
+
+.founder-carousel-slide {
+    display: flex;
+    gap: 4rem;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.founder-quote-card {
+    flex: 1;
+    padding: 0.5rem 0 0.5rem 2rem;
+    text-align: left;
+    background: transparent;
+    border-left: 2px solid var(--accent-primary, #6fb6ff);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+}
+
+.founder-quote-text {
+    font-style: italic;
+    color: #555555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.founder-quote-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.founder-quote-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #6fb6ff;
+}
+
+.founder-quote-name {
+    color: #04213F;
+    margin: 0 0 0.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.founder-quote-role {
+    font-size: 0.9rem;
+    color: #6fb6ff;
+    margin: 0;
+}
+
+.founder-cta-section {
+    background-color: #FAF3E0;
+    color: #04213F;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.founder-cta-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.founder-cta-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.founder-cta-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    background: var(--accent-primary, #6fb6ff);
+    color: #ffffff;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.founder-cta-btn:hover {
+    background: #005bb5;
+}
+
+.founder-cta-btn .icon-right {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.founder-cta-btn:hover .icon-right {
+    transform: translateX(4px);
+}
+
+.founder-cta-disclaimer {
+    font-size: 1rem;
+    color: rgba(4, 33, 63, 0.5);
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.founder-footer {
+    padding: 2rem 0;
+    width: 100%;
+    border-top: 1px solid rgba(4, 33, 63, 0.08);
+    color: rgba(4, 33, 63, 0.6);
+}
+
+.founder-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.founder-footer-text {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.founder-social-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.founder-social-link {
+    color: rgba(4, 33, 63, 0.6);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.founder-social-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+}
