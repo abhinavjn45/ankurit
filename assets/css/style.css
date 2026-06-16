@@ -1048,7 +1048,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 0%;
-    background: linear-gradient(to bottom, var(--accent-primary), #0066cc);
+    background: linear-gradient(to bottom, var(--accent-primary), #6fb6ff);
     transition: height 0.1s ease-out;
 }
 
@@ -1294,7 +1294,7 @@ h6 {
 
 .founder-theme .nav-links a:not(.btn-primary):hover,
 .founder-theme .nav-links a.active:not(.btn-primary) {
-    color: #0066cc !important;
+    color: #6fb6ff !important;
 }
 
 .founder-theme .mobile-menu-btn span {
@@ -1310,7 +1310,7 @@ h6 {
 }
 
 .founder-theme .timeline-title {
-    color: #0066cc !important;
+    color: #6fb6ff !important;
 }
 
 .founder-theme .timeline-desc {
@@ -1323,4 +1323,71 @@ h6 {
 
 .founder-theme .timeline-dot {
     background: #FAF3E0 !important;
+}
+
+/* Ensure Thinking Partner section fits perfectly inside 100vh on desktop devices */
+@media (min-width: 1025px) {
+    #thinking-partner-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        top: 0px !important;             /* Force section to stick at top: 0px always */
+        padding-top: 90px !important;    /* Account for navbar header + spacing */
+        padding-bottom: 25px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    #thinking-partner-section .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #thinking-partner-section .partner-grid {
+        gap: 3.5rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+
+    #thinking-partner-section h2 {
+        font-size: 2.8rem !important;
+        margin-bottom: 0.8rem !important;
+        line-height: 1.2 !important;
+    }
+
+    #thinking-partner-section .partner-grid div > div {
+        font-size: 1.1rem !important;
+        line-height: 1.65 !important;
+    }
+
+    #thinking-partner-section .partner-grid div > div p {
+        margin-bottom: 0.6rem !important;
+    }
+
+    #thinking-partner-section img {
+        max-width: 280px !important;
+        border-radius: 12px !important;
+    }
+
+    #thinking-partner-section .founder-cards-grid-3 {
+        gap: 2.5rem !important;
+    }
+
+    #thinking-partner-section .founder-cards-grid-3 > div {
+        gap: 0.5rem !important;
+    }
+
+    #thinking-partner-section .founder-cards-grid-3 svg {
+        width: 1.8rem !important;
+        height: 1.8rem !important;
+    }
+
+    #thinking-partner-section .founder-cards-grid-3 h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    #thinking-partner-section .founder-cards-grid-3 p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
 }
