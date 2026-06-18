@@ -40,3 +40,9 @@ body.founder-theme {
     --accent-gradient: #6fb6ff;
     background-color: #FAF3E0;
 }
+
+body.investor-theme {
+    --accent-primary: #C8541A;
+    --accent-primary-hover: #b04815;
+    --accent-gradient: #C8541A;
+}

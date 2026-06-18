@@ -14,6 +14,7 @@
 .investor-section-dark-blue .founder-heading-lg,
 .investor-section-dark-blue .founder-heading-md,
 .investor-section-dark-blue .founder-card-heading,
+.investor-section-dark-blue .founder-card-heading-inline,
 .investor-section-dark-blue .founder-rules-heading,
 .investor-section-dark-blue .timeline-title {
     color: #ffffff;
@@ -30,6 +31,7 @@
 .investor-section-dark-blue .founder-subtext-md,
 .investor-section-dark-blue .founder-card-desc,
 .investor-section-dark-blue .founder-card-desc-sm,
+.investor-section-dark-blue .founder-card-desc-inline,
 .investor-section-dark-blue .founder-partner-text,
 .investor-section-dark-blue .founder-rules-desc,
 .investor-section-dark-blue .timeline-desc {
@@ -102,4 +104,130 @@
 .investor-theme .navbar.scrolled .nav-links a:not(.btn-investor):hover,
 .investor-theme .navbar.scrolled .nav-links a.active:not(.btn-investor) {
     color: var(--accent-primary) !important;
+}
+
+/* Creative List Styles for Investor Page */
+.investor-creative-bullet {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    background: rgba(200, 84, 26, 0.1);
+    color: var(--accent-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    border: 1px solid rgba(200, 84, 26, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(200, 84, 26, 0.05);
+}
+
+.investor-roi-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.investor-roi-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0;
+}
+
+.founder-section-white-dark-text .investor-roi-list li {
+    color: var(--text-dark, #333333);
+}
+
+.investor-roi-list svg {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+/* Highlight Block Override for Investor Theme */
+.investor-theme .founder-highlight-block {
+    color: var(--accent-primary) !important;
+}
+
+/* Timeline Light Theme Overrides for Investor Page */
+.founder-section-white-dark-text .timeline-card {
+    background: transparent !important;
+    border: none !important;
+    padding: 1.5rem 0 !important;
+    box-shadow: none !important;
+}
+
+.founder-section-white-dark-text .timeline-title {
+    color: var(--text-dark, #04213F) !important;
+}
+
+.founder-section-white-dark-text .timeline-desc {
+    color: rgba(4, 33, 63, 0.7) !important;
+}
+
+.founder-section-white-dark-text .timeline-line {
+    background: rgba(200, 84, 26, 0.1) !important;
+}
+
+.founder-section-white-dark-text .timeline-dot {
+    background: #ffffff !important;
+    border: 3px solid var(--accent-primary) !important;
+}
+
+.founder-section-white-dark-text .timeline-number {
+    color: var(--accent-primary) !important;
+}
+
+/* Fix timeline progress gradient for investor theme */
+.investor-theme .timeline-progress {
+    background: var(--accent-primary) !important;
+}
+
+/* Quote Card Hover Animations */
+.investor-quote-card {
+    background: white;
+    border-radius: 20px;
+    padding: 4rem 3.5rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.investor-quote-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 70px rgba(0,0,0,0.4);
+}
+
+.investor-quote-icon {
+    margin-bottom: 1.5rem;
+}
+
+.investor-quote-icon svg {
+    width: 48px;
+    height: 48px;
+    color: var(--accent-primary);
+    opacity: 0.6;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center;
+}
+
+.investor-quote-card:hover .investor-quote-icon svg {
+    opacity: 1;
+    transform: scale(1.15) translateY(-5px);
+}
+
+.investor-quote-card p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--text-dark, #04213F);
+    font-style: italic;
+    margin: 0;
 }
