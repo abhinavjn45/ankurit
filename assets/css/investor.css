@@ -1,0 +1,105 @@
+/* investor.css - Styles specifically for the Investor page */
+
+.investor-section-dark-blue {
+    background-color: #04213F;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headings in dark blue section */
+.investor-section-dark-blue .founder-heading-xl,
+.investor-section-dark-blue .founder-heading-lg,
+.investor-section-dark-blue .founder-heading-md,
+.investor-section-dark-blue .founder-card-heading,
+.investor-section-dark-blue .founder-rules-heading,
+.investor-section-dark-blue .timeline-title {
+    color: #ffffff;
+}
+
+/* Secondary headings / highlights in dark blue section */
+.investor-section-dark-blue .founder-highlight-inline,
+.investor-section-dark-blue .founder-highlight-block {
+    color: var(--accent-primary, #6fb6ff);
+}
+
+/* Text and descriptions in dark blue section */
+.investor-section-dark-blue .founder-subtext-lg,
+.investor-section-dark-blue .founder-subtext-md,
+.investor-section-dark-blue .founder-card-desc,
+.investor-section-dark-blue .founder-card-desc-sm,
+.investor-section-dark-blue .founder-partner-text,
+.investor-section-dark-blue .founder-rules-desc,
+.investor-section-dark-blue .timeline-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Invert number icon for dark background */
+.investor-section-dark-blue .founder-number-icon {
+    background-color: #ffffff;
+    color: #04213F;
+}
+
+/* Timeline specific overrides for dark background */
+.investor-section-dark-blue .timeline-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.investor-section-dark-blue .timeline-number {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.investor-section-dark-blue .timeline-line {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.investor-section-dark-blue .timeline-dot {
+    background: var(--accent-primary, #6fb6ff);
+    border: 4px solid #04213F;
+}
+
+/* CTA and Footer specific overrides for dark background */
+.investor-cta-section.founder-cta-section {
+    background-color: #04213F;
+    color: #ffffff;
+}
+
+.investor-cta-section .founder-heading-cta {
+    color: #ffffff;
+}
+
+.investor-cta-section .founder-subtext-cta,
+.investor-cta-section .founder-cta-disclaimer,
+.investor-cta-section .founder-footer-text,
+.investor-cta-section .founder-social-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.investor-cta-section .founder-social-link:hover {
+    color: #ffffff;
+}
+
+/* Navbar scrolled state for Investor CTA button */
+.navbar.scrolled .btn-investor {
+    color: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+.navbar.scrolled .btn-investor:hover {
+    background-color: var(--accent-primary) !important;
+    color: #ffffff !important;
+}
+
+/* Navbar link colors for investor theme */
+.investor-theme .navbar .nav-links a:not(.btn-investor):hover,
+.investor-theme .navbar .nav-links a.active:not(.btn-investor) {
+    color: var(--accent-primary) !important;
+}
+
+.investor-theme .navbar.scrolled .nav-links a:not(.btn-investor):hover,
+.investor-theme .navbar.scrolled .nav-links a.active:not(.btn-investor) {
+    color: var(--accent-primary) !important;
+}

@@ -5,11 +5,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
+    const logoImg = document.querySelector('.navbar .logo img');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
+            if (navbar.classList.contains('theme-dark') && logoImg) {
+                logoImg.src = '../assets/images/logo/logo-main.svg';
+            }
         } else {
             navbar.classList.remove('scrolled');
+            if (navbar.classList.contains('theme-dark') && logoImg) {
+                logoImg.src = '../assets/images/logo/logo-white.svg';
+            }
         }
     });
 
