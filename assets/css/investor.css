@@ -69,6 +69,10 @@
     color: #ffffff;
 }
 
+.investor-cta-section .founder-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .investor-cta-section .founder-heading-cta {
     color: #ffffff;
 }
