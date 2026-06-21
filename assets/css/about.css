@@ -1,5 +1,77 @@
 /* about.css - Specific customizations for the About page (No-Box Clean Editorial Theme) */
 
+/* --- Dual Accent Variables --- */
+:root {
+    --color-founder-blue: #6fb6ff;
+    --color-investor-orange: #C8541A;
+    --color-investor-orange-bright: #ff7d3c;
+}
+
+/* --- Solid Accent Utility Classes (No Gradients) --- */
+.about-text-founder-blue {
+    color: var(--color-founder-blue) !important;
+}
+
+.about-text-investor-orange {
+    color: var(--color-investor-orange) !important;
+}
+
+.about-highlight-founder {
+    color: var(--color-founder-blue) !important;
+}
+
+.about-highlight-investor {
+    color: var(--color-investor-orange) !important;
+}
+
+/* Ensure high contrast for text highlights in dark background sections */
+.investor-section-dark-blue .about-highlight-founder {
+    color: var(--color-founder-blue) !important;
+}
+
+.investor-section-dark-blue .about-highlight-investor {
+    color: var(--color-investor-orange-bright) !important;
+}
+
+/* Solid accent colors for timeline dots */
+.about-timeline-dot-founder {
+    border-color: var(--color-founder-blue) !important;
+}
+
+.about-timeline-item:hover .about-timeline-dot-founder {
+    background: var(--color-founder-blue) !important;
+}
+
+.about-timeline-dot-investor {
+    border-color: var(--color-investor-orange) !important;
+}
+
+.about-timeline-item:hover .about-timeline-dot-investor {
+    background: var(--color-investor-orange) !important;
+}
+
+/* Specific timeline text hover behaviors based on role type */
+.about-timeline-item-investor:hover .about-timeline-title {
+    color: var(--color-investor-orange) !important;
+}
+
+.about-timeline-item-founder:hover .about-timeline-title {
+    color: var(--color-founder-blue) !important;
+}
+
+/* solid founder blue button on about page */
+.about-btn-founder-blue {
+    background: var(--color-founder-blue) !important;
+    color: #04213F !important;
+    border: none !important;
+}
+
+.about-btn-founder-blue:hover {
+    background: #509eed !important;
+    color: #04213F !important;
+    transform: translateY(-2px);
+}
+
 /* --- Hero / Intro Section --- */
 @media (min-width: 769px) {
     .about-partner-grid {
