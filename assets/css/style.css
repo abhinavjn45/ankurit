@@ -1275,7 +1275,7 @@ h6 {
         box-shadow: none !important;
     }
 
-    .founder-cards-grid, .founder-cards-grid-3, .partner-grid {
+    .founder-cards-grid, .founder-cards-grid-3, .partner-grid, .founder-grid-2, .founder-grid-3 {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
     }
