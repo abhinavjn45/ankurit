@@ -30,6 +30,10 @@ h6 {
 }
 
 /* Utilities */
+.bg-light-warm {
+    background-color: #FAF3E0 !important;
+}
+
 .btn-primary {
     background: var(--accent-gradient);
     color: white;
