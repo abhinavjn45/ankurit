@@ -38,6 +38,12 @@
     }
     </script>
 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/logo/favicon/site.webmanifest">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +56,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="initial-load">
+<body class="initial-load" data-sheet-gid="963376062">
     <!-- Hero Section -->
     <main>
         <section id="hero" class="hero-section">
@@ -67,9 +73,9 @@
                     <div class="slides-wrapper">
                         <!-- Slide 1 -->
                         <div class="text-slide slide-founders active">
-                            <span class="sub-heading">For Founders</span>
-                            <h1>What’s the<br><span class="keyword">decision</span><br>&nbsp; you’ve been sitting with?</h1>
-                            <div class="text-lines">
+                            <span id="founder_slide_subheading" class="sub-heading">For Founders</span>
+                            <h1 id="founder_slide_heading">What’s the<br><span class="keyword">decision</span><br>&nbsp; you’ve been sitting with?</h1>
+                            <div id="founder_slide_paragraphs" class="text-lines">
                                 <p>You probably already know what needs to be done.</p>
                                 <p>You just haven’t had the space to think it through clearly.</p>
                             </div>
@@ -77,9 +83,9 @@
 
                         <!-- Slide 2 -->
                         <div class="text-slide slide-investors">
-                            <span class="sub-heading">For Investors</span>
-                            <h1>The biggest<br><span class="keyword">portfolio risks</span><br>&nbsp; rarely show up on a dashboard.</h1>
-                            <div class="text-lines">
+                            <span id="investor_slide_subheading" class="sub-heading">For Investors</span>
+                            <h1 id="investor_slide_heading">The biggest<br><span class="keyword">portfolio risks</span><br>&nbsp; rarely show up on a dashboard.</h1>
+                            <div id="investor_slide_paragraphs" class="text-lines">
                                 <p>Critical founder decisions are often made alone,</p>
                                 <p>long before they reach the boardroom.</p>
                             </div>
@@ -88,14 +94,14 @@
                     
                     <!-- Fixed CTAs -->
                     <div class="cta-group" style="margin-top: 1rem;">
-                        <a href="./founder/" class="btn-primary btn-founder">
-                            I'm a founder 
+                        <a href="./founder/" id="cta_1_link" class="btn-primary btn-founder">
+                            <span id="cta_1_label">I'm a founder</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 20" class="icon-right">
                                 <path d="M0 10 L68 10 M58 2 L68 10 L58 18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <a href="./investor/" class="btn-primary btn-investor">
-                            I invest in founders 
+                        <a href="./investor/" id="cta_2_link" class="btn-primary btn-investor">
+                            <span id="cta_2_label">I invest in founders</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 20" class="icon-right">
                                 <path d="M0 10 L68 10 M58 2 L68 10 L58 18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -117,6 +123,6 @@
     <!-- JavaScript Files -->
     <script src="assets/js/google-sheets.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/dynamic-content.js"></script>
 </body>
-
 </html>
